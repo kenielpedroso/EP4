@@ -1,3 +1,11 @@
+/*seletor para modificar toda a estrutura do site*/
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*seletor com propriedades para deixar o site no estilo de grade*/
 body{
     display: grid;
     grid-gap: 0.5rem;
@@ -9,34 +17,84 @@ body{
     grid-template-rows:auto auto auto;
 }
 
+/*seletor de classe com propriedades para ajustar o estilo do header*/
 .grad_h{
     grid-area: cabeca;
-    padding: 10px;
-    background-color: rgb(101, 139, 101);
-    
+    background-color: green;
+    padding: 0.5rem;
+    text-align: center;
+    background-image: linear-gradient(45deg, rgb(9, 221, 9), rgb(21, 150, 21));
+    position: sticky;
+    top:0;
+    border: solid;
+    border-color: green;
 }
-#logo{
-    width: 250px;
+
+/*seletor de classe para ajustar a logo*/
+.logo{
+    width: 80px;
     height: auto;
 }
 
+/*seletor de classe para ajustar o título do header*/
+.grad_h h1{
+    font-size:25px;
+    font-weight:normal;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*seletor para ajustar todas as imagems do site*/
+img{
+    width: 350px;
+}
+
+/*seletor de classe para ajustar o estilo do main*/
 .grad_m{
     grid-area: princi;
-    background-color: rgb(134, 134, 134);
-    padding: 5rem;
+    padding: 1rem;
+    background-color: rgb(70, 196, 70);
+    text-align: center;
+    border: solid;
+    border-color: green;
+}
+
+/*seletor para ajustar o estilo dos parágrafos*/
+p{
+    font-size:20px;
+}
+
+/*seletor de classe para ajustar o estilo do aside*/
+.grad_a{
+    grid-area: lados;
+    padding: 1rem;
+    background-color:  rgb(70, 196, 70);
+    border: solid;
+    border-color: green;
     
 }
 
-.grad_a{
-    grid-area: lados;
-    padding: 2rem;
-    background-color: green;
-   
+/*seletor de classe para ajustar a lista do aside*/
+.grad_a li{
+    font-size: 20px;
+    list-style: none;
+    font-weight: bolder;
 }
 
+/*seletor de classe para ajustar o tamanho do vídeo*/
+.video{
+    width: 500px;
+    height: 400px;
+}
 
+/*seletor para ajustar o estilo do footer*/
 .grad_f{
     grid-area: rodape;
+    background-color: green;
     padding: 1rem;
-    background-color: rgb(101, 139, 101);
+    background-image: linear-gradient(45deg, rgb(9, 221, 9), rgb(21, 150, 21));
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    border: solid;
+    border-color: green;
 }
