@@ -1,98 +1,154 @@
-/*seletor para modificar toda a estrutura do site*/
-*{
-    margin: 0%;
-    padding: 0%;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+@charset "UTF-8";
+@font-face {
+    font-family: 'fonte';
+    src: url(fontes/Gruppo/Gruppo-Regular.ttf)
 }
 
-/*seletor com propriedades para deixar o site no estilo de grade*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
 body{
     display: grid;
     grid-gap: 0.5rem;
     grid-template-areas:
-    "cabeca cabeca cabeca cabeca"
-    "lados princi princi princi"
-    "rodape rodape rodape rodape";
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows:auto auto auto;
+    "cabeca cabeca cabeca"
+    "ladoe princi ladod"
+    "rodape rodape rodape";
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    background-color: #181b69;
 }
 
-/*seletor de classe com propriedades para ajustar o estilo do header*/
 .grad_h{
     grid-area: cabeca;
-    padding: 0.5rem;
-    text-align: center;
-    background-image: linear-gradient(45deg, rgb(9, 221, 9), rgb(21, 150, 21));
-    position: sticky;
-    top:0;
-    border: solid;
-    border-color: green;
+    background-image: linear-gradient(to top,#292c93, black);
+    display: flex;
 }
 
-/*seletor de classe para ajustar a logo*/
 .logo{
-    width: 80px;
+    width: 10%;
+    border: solid red;
+}
+
+.nome{
+    color: white;
+    font-size: 25px;
+    font-family: 'fonte';
+    margin-top: 5.5rem;
+    position: absolute;
+    left: 155px;
+
+}
+
+.icones{
+    width: 40px;
     height: auto;
 }
 
-/*seletor de classe para ajustar o título do header*/
-.grad_h h1{
-    font-size:25px;
-    font-weight:normal;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+nav li{
+    display: flex;
+    display:inline-block;
+    margin-left: 20rem;
 }
 
-/*seletor para ajustar todas as imagems do site*/
-img{
-    width: 350px;
-}
-
-/*seletor de classe para ajustar o estilo do main*/
 .grad_m{
     grid-area: princi;
-    padding: 1rem;
-    background-color: rgb(70, 196, 70);
-    text-align: center;
-    border: solid;
-    border-color: green;
-}
-
-/*seletor para ajustar o estilo dos parágrafos*/
-p{
-    font-size:20px;
-}
-
-/*seletor de classe para ajustar o estilo do aside*/
-.grad_a{
-    grid-area: lados;
-    padding: 1rem;
-    background-color:  rgb(70, 196, 70);
-    border: solid;
-    border-color: green;
+    background-color: white;
+    font-size: 1em;
+    color: #3b3e9e;
+    margin-left: 36%;
+    margin-top: 2%;
+    justify-content: center;
     
+   
 }
 
-/*seletor de classe para ajustar a lista do aside*/
-.grad_a li{
-    font-size: 20px;
-    list-style: none;
-    font-weight: bolder;
-}
-
-/*seletor de classe para ajustar o tamanho do vídeo*/
-.video{
-    width: 500px;
-    height: 400px;
-}
-
-/*seletor para ajustar o estilo do footer*/
 .grad_f{
     grid-area: rodape;
-    padding: 1rem;
-    background-image: linear-gradient(45deg, rgb(9, 221, 9), rgb(21, 150, 21));
-    display: flex;
+    background-image: linear-gradient(to bottom,#292c93, black)
+}
+
+/*formulario*/
+.grad_mcadastro{
+    grid-area: princi;
+    background-color: white;
+    font-size: 1em;
+    color: #3b3e9e;
+    margin-left: 36%;
+    margin-top: 2%;
     justify-content: center;
-    justify-content: space-around;
-    border: solid;
-    border-color: green;
+    border: solid black 5px;
+}
+
+#titulo{
+    font-family: 'fonte';
+    color:  #1d2192;
+    margin-left: 7%;
+}
+
+#subtitulo{
+    font-family: Arial, Helvetica, sans-serif;
+    color:#2e32a5;
+    margin-left: 4%;
+}
+fieldset{
+    border: 0;
+}
+
+input, select, textarea, button{
+    border-radius: 5px;
+}
+
+.campo{
+    margin-bottom: 1em;
+}
+
+.campo label{
+    margin-bottom: 0.2em;
+    color:#5b60f1;
+    display: block;
+}
+
+fieldset .grupo .campo{
+    float: left;
+    margin-right: 1em;
+}
+
+.campo input[type="text"], .campo input[type="email"], .campo select, .campo textarea{
+    padding: 0.2em;
+    border: 1px solid rgb(45, 45, 168);
+    box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.2);
+}
+
+.campo select option{
+    padding-right: 1em;
+}
+
+.campo input:focus, .campo select:focus, .campo textarea:focus{
+    background-color: white;
+}
+
+.botao{
+    font-size: 1.2em;
+    background-color: rgb(31, 31, 121);
+    border: 0;
+    margin-bottom: 1em;
+    color: white;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.botao:hover{
+    background-color: #ccbbff;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0, 0.2);
+    text-shadow: none;
+
 }
